@@ -5,10 +5,10 @@ import "./App.css";
 function App() {
   const [userName, setUserName] = useState("");
   useEffect(() => {
-    getName();
+    GetName();
   }, []);
 
-  const getName = async () => {
+  const GetName = async () => {
     const response = await axios.get("/names");
     setUserName(response.data);
   };
