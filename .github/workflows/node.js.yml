@@ -1,4 +1,4 @@
-name: Node.js CI
+name: Node.js CICD
 
 on:
   push:
@@ -8,7 +8,9 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    # runs-on: ubuntu-latest
+    runs-on: self-hosted
+
     steps:
       - uses: actions/checkout@v4
       - name: Use Node.js ${{matrix.node-version}}
